@@ -1,14 +1,13 @@
 exports.largestPrimeFactor = function (n) {
-  var primeNumber = 0;
-  let i = 2;
-  while (i <= n) {
-    if (n % i == 0) {
-      n /= i;
+  var primeNumber = 2;
+
+  while (primeNumber <= n) {
+    if (n % primeNumber == 0) {
+      n /= primeNumber;
     } else {
-      i++;
+      primeNumber++;
     }
   }
-  primeNumber = i;
 
   return primeNumber;
 };
